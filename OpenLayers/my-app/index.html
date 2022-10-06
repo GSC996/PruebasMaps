@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Consulta a una base de datos (CartoDB)</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/ol/ol.css">
+  <style>
+    .map {
+      width: 100%;
+      height: 400px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="map" class="map"></div>
+  <form class="row">
+    <div class="col-auto">
+      <div class="input-group">
+        <label for="country-area" class="input-group-text">Mostrar paises americanos con un area mayor a:</label>
+        <select id="country-area" class="form-select">
+          <option value="0" default>0 ㎢</option>
+          <option value="5000">5000 ㎢</option>
+          <option value="10000">10000 ㎢</option>
+          <option value="50000">50000 ㎢</option>
+          <option value="100000">100000 ㎢</option>
+        </select>
+      </div>
+    </div>
+  </form>
+  <!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
+  <script src="https://unpkg.com/elm-pep@1.0.6/dist/elm-pep.js"></script>
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
